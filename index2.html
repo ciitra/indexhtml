@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HBD Talitha Cute</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"/>
+
+  <style>
+    body {
+      background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1740&q=80');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .font-pacifico {
+      font-family: 'Pacifico', cursive;
+    }
+    .glass {
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.4);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body class="flex justify-center items-center h-screen">
+
+  <div id="kartu" class="glass rounded-xl shadow-lg p-8 w-80 text-center animate__animated animate__fadeInDown">
+    <h1 class="text-2xl font-bold text-white">Happy Birthday 🎉</h1>
+    <h2 class="text-3xl font-pacifico text-pink-200 mt-2 animate__animated animate__pulse animate__infinite">Talitha Puspitasari</h2>
+    <button onclick="ubahKartu()" class="mt-6 px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-700 transition animate__animated animate__tada animate__delay-1s w-full">
+      Klik Disini yaah 💌
+    </button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+  <script>
+    confetti({
+      particleCount: 120,
+      spread: 90,
+      origin: { y: 0.6 }
+    });
+
+    function ubahKartu() {
+      const kartu = document.getElementById("kartu");
+      kartu.innerHTML = `
+        <h2 class="text-xl text-white animate__animated animate__fadeInDown">🎂 Talitha's Special Day! 🎂</h2>
+        <p class="mt-4 text-white animate__animated animate__zoomIn">
+          Semoga hari Talitha selalu dipenuhi dengan tawa, cinta, dan semua hal yang membuat Talitha happy!
+        </p>
+        <p class="mt-2 text-white animate__animated animate__fadeInUp animate__delay-1s">
+          Jangan lupa bersyukur yaa karena kamu sudah melewati hari"mu dg baikk🍰 tetap jadi Talitha yang paling gemes 🥰
+        </p>
+        <p class="mt-4 italic text-pink-100 animate__animated animate__fadeIn animate__delay-2s">
+          - Dari: Citra cute abis💖 -
+        </p>
+        <button onclick="refresh()" class="mt-6 px-4 py-2 bg-white text-pink-600 font-semibold rounded hover:bg-gray-200 transition animate__animated animate__tada animate__delay-3s w-full">
+          Tutup 🎀
+        </button>
+      `;
+    }
+
+    function refresh() {
+      location.reload();
+    }
+  </script>
+</body>
+</html>
